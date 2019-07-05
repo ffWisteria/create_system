@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Hello")
+@WebServlet("/hello")
 // HttpServletを継承することで、このクラスはServletとして、働くことができる
 public class Hello extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -25,7 +25,7 @@ public class Hello extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         //request.setAttribute("",);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/HelloIndex.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/HelloIndex.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -40,6 +40,6 @@ public class Hello extends HttpServlet {
         String hello = request.getParameter("hello");
         System.out.println("取得した文字列は" + hello + "です！");
 
-        response.sendRedirect("/HelloJspServlet/Hello");
+        response.sendRedirect("/hello");
     }
 }

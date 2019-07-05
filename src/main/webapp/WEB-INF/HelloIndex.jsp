@@ -4,7 +4,7 @@ index.jsp
 ---------------------------------->
 <HTML>
 <BODY>
-<FORM action="/HelloJspServlet/Hello" method="post">
+<FORM action="./hello" method="post">
     <INPUT type="text" name="hello">
     <INPUT type="submit" name="OK">
 </FORM>
